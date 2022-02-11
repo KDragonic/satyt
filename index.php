@@ -107,8 +107,8 @@
 				<label class="BoxFamil">
 					<span class="nameInput">Фамилия</span> <span class="star">*</span><br>
 					<div class="inputBox">
-						<input type="text" id="familInput">
-						<img src="src/InputCheckMark.svg" alt="" name="family" required>
+						<input type="text" id="familInput" required>
+						<img src="src/InputCheckMark.svg" alt="" name="family">
 					</div>
 				</label>
 				<label class="BoxName">

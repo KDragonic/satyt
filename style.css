@@ -172,6 +172,14 @@ input[type="radio"]
 	display: block;
 }
 
+input[required] + img {
+	visibility: hidden;
+}
+
+input[required]:valid + img {
+	visibility: visible;
+}
+
 button {
 	border: 1px solid #DFE2E4;
 	box-sizing: border-box;
