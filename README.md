@@ -4,4 +4,4 @@
 
 
 <h2>Фото</h2>
-![image](https://user-images.githubusercontent.com/74604930/153578288-b8c6509a-d640-4f44-953a-980751444f38.png)
+<img scr="https://user-images.githubusercontent.com/74604930/153578288-b8c6509a-d640-4f44-953a-980751444f38.png" alt="Фото">
