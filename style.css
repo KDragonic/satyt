@@ -172,7 +172,7 @@ input[type="radio"]
 	display: block;
 }
 
-button {
+input[type="submit"] {
 	border: 1px solid #DFE2E4;
 	box-sizing: border-box;
 

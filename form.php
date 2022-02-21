@@ -1,58 +1,71 @@
 <?php
 
 
-$message = '';
+class SendMail
+{
+   private $email;
+   private $topic;
+   private $data;
+   private $errors = [];
 
+   public function __construct($email, $topic, $data)
+   {
+      $this->email = $email;
+      $this->topic = $topic;
+      $this->data = $data;
 
-if(isset($_POST["email"])){
-  
-   $message += "email: " . $_POST["email"] + "\r\n";
+      if($this->validate($this->data))
+         $this->send($email, $topic, $data);
+      
+      $response = [
+         "message" => "Невернные данные",
+         "fields" => []
+      ];
+
+      echo json_encode($response);
+   }
+
+   public function validate($validate)
+   {
+      $requires = ['email', 'phone', 'surname', 'name'];
+
+      foreach($validate as $key)
+      {
+         if(empty($validate[$key]) && in_array($key, $requires))
+            $errors[] = $key;
+      }
+
+      if(!empty($errors))
+      {
+         $response = [
+            "message" => "Заполните обезательные поля",
+            "errors" => $errors
+         ];
+
+         echo json_encode($response);
+
+         exit();
+      }
+
+      $validatePhone = preg_match("/^[8?\+7][0-9]{10}$/", str_replace(['+','-','(',')',' '], '', $validate['phone']));
+      
+      if(!filter_var($validate['email'], FILTER_VALIDATE_EMAIL) || !$validatePhone)
+      {
+         return false;
+      }
+      
+      return true;
+   }
+
+   public function send($email, $topic, $message)
+   {
+      $response = [
+         "message" => "Запрос выполнен удачно!",
+      ];
+
+      echo json_encode($response);
+
+      die();
+   }
 }
-
-if(isset($_POST["telephone"])){
-  
-   $message +=  "telephone: " . $_POST["telephone"] + "\r\n";
-}
-
-if(isset($_POST["telephone2"])){
-  
-   $message += "telephone2: " . $_POST["telephone2"] + "\r\n";
-}
-
-if(isset($_POST["family"])){
-  
-   $message += "family: " . $_POST["family"] + "\r\n";
-}
-
-if(isset($_POST["name"])){
-  
-   $message += "name: " . $_POST["name"] + "\r\n";
-}
-
-if(isset($_POST["surname"])){
-  
-   $message += "surname: " . $_POST["surname"] + "\r\n";
-}
-
-if(isset($_POST["dateBirthDay"])){
-  
-   $message += "dateBirthDay: " . $_POST["dateBirthDay"] + "\r\n";
-}
-
-if(isset($_POST["dateBirthMonth"])){
-  
-   $message += "dateBirthMonth: " . $_POST["dateBirthMonth"] + "\r\n";
-}
-
-if(isset($_POST["dateBirthYear"])){
-  
-   $message += "dateBirthYear: " . $_POST["dateBirthYear"] + "\r\n";
-}
-
-if(isset($_POST["sex"])){
-  
-   $message += "sex: " . $_POST["sex"] + "\r\n";
-}
-
-// Отправляем
-mail('denkoropov@gmail.com', 'Test 1', $message);
+$send = new SendMail($_POST['email'], 'Ваши данные', $_POST);

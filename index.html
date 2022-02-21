@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Мой профиль</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="js/jquery"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/valid.js"></script>
+
 </head>
 <body>
 	<main>
@@ -78,11 +80,11 @@
 				</li>
 			</ul>
 
-			<form action="form.php" class="myDateForm" method="POST">
+			<form>
 				<label class="BoxEmail">
 					<span class="nameInput">E-mail</span> <span class="star">*</span><br>
 					<div class="inputBox">
-						<input type="text" id="emailInput" name="email">
+						<input type="text" id="emailInput" name="email" class="email" required>
 						<img src="src/InputCheckMark.svg" alt="">
 					</div>
 				</label>
@@ -90,14 +92,14 @@
 					<label class="BoxTel">
 						<span class="nameInput">Номер телефона</span> <span class="star">*</span><br>
 						<div class="inputBox">
-							<input type="text" id="telInput" name="telephone">
-							<img src="inputCheckMark.svg" alt="">
+							<input type="text" id="telInput" name="phone" required>
+							<img src="src/InputCheckMark.svg" alt="">
 						</div>
 					</label>
 					<label class="Box2Tel">
 						<span class="nameInput">Дополнительный номер</span><br>
 						<div class="inputBox">
-							<input type="text" id="tel2Input" name="telephone2">
+							<input type="text" id="tel2Input" name="phone2">
 							<img src="src/InputCheckMark.svg" alt="">
 						</div>
 					</label>
@@ -106,13 +108,13 @@
 					<span class="nameInput">Фамилия</span> <span class="star">*</span><br>
 					<div class="inputBox">
 						<input type="text" id="familInput">
-						<img src="src/InputCheckMark.svg" alt="" name="family">
+						<img src="src/InputCheckMark.svg" alt="" name="family" required>
 					</div>
 				</label>
 				<label class="BoxName">
 					<span class="nameInput">Имя</span> <span class="star">*</span><br>
 					<div class="inputBox">
-						<input type="text" id="nameInput" name="name">
+						<input type="text" id="nameInput" name="name" required>
 						<img src="src/InputCheckMark.svg" alt="">
 					</div>
 				</label>
@@ -223,7 +225,7 @@
 							<label for="sexInput_1">
 								<span>
 									Мужской
-									<img src="scr\nputCheckMark.svg" alt="">
+									<img src="src/InputCheckMark.svg" alt="">
 								</span>
 							</label>					
 						</div>
@@ -238,7 +240,7 @@
 							</label>
 						</div>
 				</div>
-				<button>Сохранить изменения</button>
+				<input type="submit" value="Сохранить изменения" onclick="validate.send(this, event)">
 			</form>
 		</div>
 	</main>
