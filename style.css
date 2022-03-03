@@ -1,6 +1,5 @@
-body{
-	margin:  0;
-}
+
+body{ margin:  0; }
 
 main{
 	background: #E5E5E5;
@@ -16,26 +15,41 @@ main{
 	padding: 0;
 }
 
-li {
-	list-style-type: none;
-}
+li { list-style-type: none; }
+
+
 
 .tab_1 div{
-	margin: 3px;
+	/* margin: 4px; */
+	margin-top: 5px;
+	margin-left: 7.4px;
 	height: 44px;
 	box-sizing: border-box;
 	border-radius: 5px;
 	padding:  12px;
 }
 
-.myProfel{
+.myProfil .name {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 25px;
+	/* identical to box height, or 125% */
+	color: #1C294D;
+	margin-top: 0;
+}
+
+.myProfil{
 	padding: 45px;
 	background: #FFFFFF;
 	border-radius: 5px;
+    width: 659px;
 }
 
 form {
 	width: 420px;
+	margin-top: 32px
 }
 
 .tab_1 div:hover{
@@ -60,11 +74,87 @@ form {
 	font-size: 14px;
 	line-height: 20px;
 	/* identical to box height, or 143% */
-	margin-bottom:  5px;
 
 	/* icon-gray-2 */
 	color: #959EA4;
 }
+
+.BoxEmail .inputBox {
+	margin-top: 4px;
+}
+
+/* .Box
+
+.BoxTels{
+	margin-top: 20px;
+} */
+
+.BoxTel .inputBox{
+	margin-top: 5px;
+}
+
+.BoxEmail .CheckMarkImg {
+	position: relative;
+	left: 3px;
+}
+
+.Box2Tel {
+	margin-top: 1px;
+	margin-left: 6px;
+	width: 294px;
+}
+
+.Box2Tel .inputBox{
+	margin-top: 3px;
+}
+
+.BoxFamil .inputBox{
+	margin-top: 5px;
+}
+
+.BoxFamil .CheckMarkImg {
+	position: relative;
+	left: 3px;
+	top: 1px;
+}
+
+.BoxName .inputBox {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.BoxName .CheckMarkImg{
+	position: relative;
+	left: 3px;
+}
+
+.BoxSurname .inputBox{
+	margin-top: 3px;
+}
+
+.BoxDateBirth .inputBox {
+	margin-top: 5px;
+	padding: 7px;
+	padding-top: 9px;
+	padding-left:8px;
+	appearance: none;
+}
+
+.radioInput {
+	margin-top: 5px;
+}
+
+.radioInput label {
+	padding-right: 4px;
+}
+
+
+
+
+
+
+
+
 
 .star{
 	color: red;
@@ -85,7 +175,7 @@ input:focus, select:focus{
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-right: 20px;
-	margin-left: 20px;
+	margin-left: 23px;
 }
 
 .inputBox{
@@ -103,10 +193,6 @@ input:focus, select:focus{
 	display: flex;
 	width: 420px;
 	justify-content: space-between;
-}
-
-.BoxTels .inputBox{
-	
 }
 
 .BoxDateBirth section{
@@ -259,15 +345,7 @@ input[type="submit"] {
 	border-radius: 50%;
 }
 
-
-
-
-
-
-
-
-
-.nav li{
+.nav span{
 	display: block;
 	margin-left: 20px;
 	padding: 20px;
@@ -277,20 +355,17 @@ input[type="submit"] {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 20px;
-	/* identical to box height, or 143% */
-
-
 	color: #1C294D;
 }
 
-.nav li + div{
+.nav span + div{
 	width: 5px;
-	height: 60px%;
+	height: 60px;
 	background: #FC6E1D;
 	border-radius: 5px;
 }
 
-.nav ul{
+.nav{
 		padding: 0;
 }
 
@@ -313,10 +388,9 @@ hr {
 	border-radius: 5px;
 }
 
-.nav section:hover li {
+.nav section:hover span {
 	margin-left: 15px;
 }
 
 
-
-
+.red {color: red}

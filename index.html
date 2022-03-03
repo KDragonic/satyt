@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="js/jquery.js"></script>
 	<script src="js/valid.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -26,48 +29,47 @@
 			</div>
 
 			<div class="nav">
-				<ul>
 					<hr>
 					<section>
+						<!-- Для полоски возле элемента -->
 						<div> </div>
-						<li>Мой профиль</li>
+						<span>Мой профиль</span>
 					</section>
 					<hr>
 
 					<section>
 						<div> </div>
-						<li>Statut Club</li>
+						<span>Statut Club</span>
 					</section>
 					<hr>
 
 					<section>
 						<div> </div>
-						<li>Заказы</li>
+						<span>Заказы</span>
 					</section>
 					<hr>
 
 					<section>
 						<div> </div>
-						<li>Избранные товары</li>
+						<span>Избранные товары</span>
 					</section>
 					<hr>
 
 					<section>
 						<div> </div>
-						<li>Отзывы о товарах</li>
+						<span>Отзывы о товарах</span>
 					</section>
 					<hr>
 
 					<section>
 						<div> </div>
-						<li style="color:red">Выход</li>
+						<span class="red">Выход</span>
 					</section>
-				</ul>
 			</div>
 		</div>
 
-		<div class="myProfel">
-			<h2>Мой профиль</h2>
+		<div class="myProfil">
+			<h2 class="name">Мой профиль</h2>
 			<ul class="tab_1">
 				<li>
 					<div><span>Личные данные</span></div>
@@ -85,7 +87,7 @@
 					<span class="nameInput">E-mail</span> <span class="star">*</span><br>
 					<div class="inputBox">
 						<input type="text" id="emailInput" name="email" class="email" required>
-						<img src="src/InputCheckMark.svg" alt="">
+						<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 					</div>
 				</label>
 				<section class="BoxTels">
@@ -93,14 +95,14 @@
 						<span class="nameInput">Номер телефона</span> <span class="star">*</span><br>
 						<div class="inputBox">
 							<input type="text" id="telInput" name="phone" required>
-							<img src="src/InputCheckMark.svg" alt="">
+							<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 						</div>
 					</label>
 					<label class="Box2Tel">
 						<span class="nameInput">Дополнительный номер</span><br>
 						<div class="inputBox">
 							<input type="text" id="tel2Input" name="phone2">
-							<img src="src/InputCheckMark.svg" alt="">
+							<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 						</div>
 					</label>
 				</section>
@@ -108,21 +110,21 @@
 					<span class="nameInput">Фамилия</span> <span class="star">*</span><br>
 					<div class="inputBox">
 						<input type="text" id="familInput">
-						<img src="src/InputCheckMark.svg" alt="" name="family" required>
+						<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="" name="family" required>
 					</div>
 				</label>
 				<label class="BoxName">
 					<span class="nameInput">Имя</span> <span class="star">*</span><br>
 					<div class="inputBox">
 						<input type="text" id="nameInput" name="name" required>
-						<img src="src/InputCheckMark.svg" alt="">
+						<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 					</div>
 				</label>
 				<label class="BoxSurname">
-					<span class="surnameInput">Отчетсво</span><br>
+					<span class="nameInput">Отчетсво</span><br>
 					<div class="inputBox">
 						<input type="text" id="surnameInput" name="surname">
-						<img src="src/InputCheckMark.svg" alt="">
+						<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 					</div>
 				</label>
 				<label class="BoxDateBirth">
@@ -152,7 +154,7 @@
 								<option value="20">20</option>
 								<option value="21">21</option>
 								<option value="22">22</option>
-								<option value="23">23</option>
+								<option selected value="23">23</option>
 								<option value="24">24</option>
 								<option value="25">25</option>
 								<option value="26">26</option>
@@ -165,18 +167,18 @@
 						</div>
 						<div class="inputBox">
 							<select id="dateBirthInput_Month" name="dateBirthMonth">
-								<option value="1">Месяц 1</option>
-								<option value="2">Месяц 2</option>
-								<option value="3">Месяц 3</option>
-								<option value="4">Месяц 4</option>
-								<option value="5">Месяц 5</option>
-								<option value="6">Месяц 6</option>
-								<option value="7">Месяц 7</option>
-								<option value="8">Месяц 8</option>
-								<option value="9">Месяц 9</option>
-								<option value="10">Месяц 10</option>
-								<option value="11">Месяц 11</option>
-								<option value="12">Месяц 12</option>
+								<option value="1">Январья</option>
+								<option value="2">Февралья</option>
+								<option value="3">Марта</option>
+								<option value="4">Апрелья</option>
+								<option value="5">Майя</option>
+								<option value="6">Июнья</option>
+								<option value="7">Июлья</option>
+								<option value="8">Августа</option>
+								<option selected value="9">Сентября</option>
+								<option value="10">Октябрья</option>
+								<option value="11">Ноябрья</option>
+								<option value="12">Декабрья</option>
 							</select>
 						</div>
 						<div class="inputBox">
@@ -225,7 +227,7 @@
 							<label for="sexInput_1">
 								<span>
 									Мужской
-									<img src="src/InputCheckMark.svg" alt="">
+									<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 								</span>
 							</label>					
 						</div>
@@ -235,7 +237,7 @@
 							<label for="sexInput_2">
 								<span>
 									Женский
-									<img src="src/InputCheckMark.svg" alt="">
+									<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 								</span>
 							</label>
 						</div>
