@@ -12,10 +12,8 @@ class SendMail
       $this->topic = $topic;
       $this->data = $data;
 
-      if($this->validate($this->data))
-         $this->send($email, $topic, $data);
-      
-      $response = [
+      if($this->validate($this->data)) $this->send($email, $topic, $data);
+      else $response = [
          "message" => "Невернные данные",
          "fields" => []
       ];
@@ -46,12 +44,10 @@ class SendMail
       }
 
       $validatePhone = preg_match("/^[8?\+7][0-9]{10}$/", str_replace(['+','-','(',')',' '], '', $validate['phone']));
-      
       if(!filter_var($validate['email'], FILTER_VALIDATE_EMAIL) || !$validatePhone)
       {
          return false;
       }
-      
       return true;
    }
 

@@ -11,14 +11,13 @@ let validate =
 			{
 				console.log("Error: " + val.getAttribute("name") + " null")
 				errors = false;
-			}				
+			}
 		}
 
 		let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 		let email = document.querySelector('.email');
 		if(reg.test(email.value) === false)
 		{
-			console.log("Invalid mail format");
 			errors = false;
 		}
 
@@ -30,7 +29,7 @@ let validate =
 		if(this.validate(_this))
 		{
 			$.ajax({
-				url: './form.php', 
+				url: './form.php',
 				method: 'POST',
 				dataType: 'html',
 				data: $("form").serialize(),
