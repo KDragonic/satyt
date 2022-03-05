@@ -1,48 +1,41 @@
-let validate =
+let send =
 {
-	validate(_this)
+	validate(form)
 	{
-		_this.preventDefault;
 		let errors = true;
-		let input = document.querySelectorAll('input[required]')
-		for(let val of input)
+		let inputs = $(form > "input[required]");
+		for(let input of inputs)
 		{
-			if(val.value === '')
+			if(input.val === '')
 			{
-				console.log("Error: " + val.getAttribute("name") + " null")
+				$(input).select();
 				errors = false;
 			}
 		}
 
 		let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-		let email = document.querySelector('.email');
-		if(reg.test(email.value) === false)
+		let email = $(form > ".email");
+		if(reg.test(email.val) === false)
 		{
 			errors = false;
 		}
 
 		return errors;
 	},
-	send(_this, event)
+	send(form)
 	{
-		event.preventDefault();
-		if(this.validate(_this))
-		{
-			$.ajax({
-				url: './form.php',
-				method: 'POST',
-				dataType: 'html',
-				data: $("form").serialize(),
-				success: function(responce)
-				{
-					responce = JSON.parse(responce);
-					console.log(responce);
-				}
-			});
-		}
-
-		// $('input').text('');
-		// $('input').attr("value", '');
-		$('input').val('');
+		if(!this.validate(form)) return false;
+		$.ajax({
+			url: './form.php',
+			method: 'POST',
+			dataType: 'html',
+			data: $("form").serialize(),
+			success: function(responce)
+			{
+				responce = JSON.parse(responce);
+				console.log(responce);
+			}
+		});
+		$(form > 'input').val('');
 	}
 }

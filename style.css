@@ -16,8 +16,6 @@ main{
 
 li { list-style-type: none; }
 
-
-
 .tab_1 div{
 	/* margin: 4px; */
 	margin-top: 5px;
@@ -78,19 +76,13 @@ form {
 	color: #959EA4;
 }
 
+.star { color: red };
+
 .BoxEmail .inputBox {
 	margin-top: 4px;
 }
 
-/* .Box
-
-.BoxTels{
-	margin-top: 20px;
-} */
-
-.BoxTel .inputBox{
-	margin-top: 5px;
-}
+.BoxTel .inputBox{ margin-top: 5px; }
 
 .BoxEmail .CheckMarkImg {
 	position: relative;
@@ -103,13 +95,9 @@ form {
 	width: 294px;
 }
 
-.Box2Tel .inputBox{
-	margin-top: 3px;
-}
+.Box2Tel .inputBox{ margin-top: 3px; }
 
-.BoxFamil .inputBox{
-	margin-top: 5px;
-}
+.BoxFamil .inputBox{ margin-top: 5px; }
 
 .BoxFamil .CheckMarkImg {
 	position: relative;
@@ -127,9 +115,7 @@ form {
 	left: 3px;
 }
 
-.BoxSurname .inputBox{
-	margin-top: 3px;
-}
+.BoxSurname .inputBox{ margin-top: 3px; }
 
 .BoxDateBirth .inputBox {
 	margin-top: 5px;
@@ -139,17 +125,10 @@ form {
 	appearance: none;
 }
 
-.radioInput {
-	margin-top: 5px;
-}
+.radioInput { margin-top: 5px; }
 
-.radioInput label {
-	padding-right: 4px;
-}
+.radioInput label { padding-right: 4px; }
 
-.star{
-	color: red;
-}
 
 .inputBox input{
 	border: none;
@@ -157,9 +136,7 @@ form {
 	background: none;
 }
 
-input:focus, select:focus{
-	outline: none;
-}
+input:focus, select:focus { outline: none; }
 
 .inputBox img {
 	height: 10px;
@@ -191,17 +168,9 @@ input:focus, select:focus{
 	justify-content:  space-between;
 }
 
-.BoxDateBirth .inputBox:nth-child(1){
-	width: 120px;
-}
-
-.BoxDateBirth .inputBox:nth-child(2){
-	width: 160px;
-}
-
-.BoxDateBirth .inputBox:nth-child(3){
-	width: 120px;
-}
+.BoxDateBirth .inputBox:nth-child(1){ width: 120px; }
+.BoxDateBirth .inputBox:nth-child(2){ width: 160px; }
+.BoxDateBirth .inputBox:nth-child(3){ width: 120px; }
 
 select {
 	width: 100%;
@@ -209,14 +178,9 @@ select {
 	border: none;
 }
 
-.BoxSex{
-	display: flex;
-}
+.BoxSex { display: flex; }
 
-input[type="radio"]
-{
-	display: none;
-}
+input[type="radio"] { display: none; }
 
 .radioInput > label {
 	display: inline-block;
@@ -231,42 +195,29 @@ input[type="radio"]
 	box-sizing: border-box;
 }
 
-.radioInput > input:checked + label{
+.radioInput > input:checked + label{ border-color: #FF7A00; }
 
-	border-color: #FF7A00;
-}
-
-.radioInput input:checked + label img{
-	display: inline-block;
-}
+.radioInput input:checked + label img{ display: inline-block; }
 
 .radioInput img{
 	margin-left:  5px;
 	display: none;
 }
 
-.radioInput span{
-	display: block;
-}
+.radioInput span{ display: block; }
 
-input[required] + img {
-	visibility: hidden;
-}
+input[required] + img { visibility: hidden; }
 
-input[required]:valid + img {
-	visibility: visible;
-}
+input[required]:valid + img { visibility: visible; }
 
 input[type="submit"] {
 	border: 1px solid #DFE2E4;
 	box-sizing: border-box;
-
 	margin-top: 30px;
 	background: #FF7A00;
 	border-radius: 5px;
 	width: 270px;
 	height: 50px;
-
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 500;
@@ -275,8 +226,6 @@ input[type="submit"] {
 	text-align: center;
 	color: #FFFFFF;
 }
-
-
 
 .menu{
 	width: 360px;
@@ -287,7 +236,6 @@ input[type="submit"] {
 	margin-right: 30px;
 	flex-shrink: 0;
 }
-
 
 .menu .header
 {
@@ -317,7 +265,6 @@ input[type="submit"] {
 	font-size: 14px;
 	line-height: 20px;
 	/* identical to box height, or 143% */
-
 	color: rgba(28, 41, 77, 0.5);
 }
 
@@ -385,6 +332,5 @@ hr {
 .nav section:hover span {
 	margin-left: 13px;
 }
-
 
 .red {color: red}

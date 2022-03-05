@@ -81,7 +81,7 @@
 				</li>
 			</ul>
 
-			<form>
+			<form onsubmit="send.send(this)">
 				<label class="BoxEmail">
 					<span class="nameInput">E-mail</span> <span class="star">*</span><br>
 					<div class="inputBox">
@@ -241,7 +241,7 @@
 							</label>
 						</div>
 				</div>
-				<input type="submit" value="Сохранить изменения" onclick="validate.send(this, event)">
+				<input type="submit" value="Сохранить изменения">
 			</form>
 		</div>
 	</main>
