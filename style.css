@@ -147,14 +147,6 @@ form {
 	padding-right: 4px;
 }
 
-
-
-
-
-
-
-
-
 .star{
 	color: red;
 }
@@ -265,7 +257,7 @@ input[required]:valid + img {
 	visibility: visible;
 }
 
-button {
+input[type="submit"] {
 	border: 1px solid #DFE2E4;
 	box-sizing: border-box;
 
