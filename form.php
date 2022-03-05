@@ -1,18 +1,14 @@
 <?php
 class SendMail
 {
-   private $email;
-   private $topic;
    private $data;
-   private $errors = [];
 
-   public function __construct($email, $topic, $data)
+   public function __construct($email, $data)
    {
       $this->email = $email;
-      $this->topic = $topic;
       $this->data = $data;
 
-      if($this->validate($this->data)) $this->send($email, $topic, $data);
+      if($this->validate($this->data)) $this->send($email, $data);
       else $response = [
          "message" => "Невернные данные",
          "fields" => []
@@ -34,7 +30,7 @@ class SendMail
       if(!empty($errors))
       {
          $response = [
-            "message" => "Заполните обезательные поля",
+            "message" => "Заполните обезательные поля, они отмечены *",
             "errors" => $errors
          ];
 
@@ -51,15 +47,17 @@ class SendMail
       return true;
    }
 
-   public function send($email, $topic, $message)
+   public function send($email, $date)
    {
       $response = [
+         "email" => $email,
          "message" => "Запрос выполнен удачно!",
+         "date" => $date,
       ];
 
       echo json_encode($response);
 
-      die();
+      exit();
    }
 }
-$send = new SendMail($_POST['email'], 'Ваши данные', $_POST);
+new SendMail($_POST['email'], 'Ваши данные', $_POST);
