@@ -7,7 +7,7 @@
 	<title>Мой профиль</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="js/jquery.js"></script>
-	<script src="js/valid.js"></script>
+	<script src="js/send.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
@@ -82,12 +82,13 @@
 					<div><span>Пароль</span></div>
 				</li>
 			</ul>
-
-			<form onsubmit="send.send(this)">
+			<!-- <iframe name="iframe1" style="position: absolute; left: -9999px;"></iframe>
+			<form id="profileForm" target="iframe1"> -->
+			<form id="profileForm">
 				<label class="BoxEmail">
 					<span class="nameInput">E-mail</span> <span class="star">*</span><br>
 					<div class="inputBox">
-						<input type="text" id="emailInput" name="email" class="email" required>
+						<input type="text" id="email" name="email" class="email" required>
 						<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 					</div>
 				</label>
@@ -95,14 +96,14 @@
 					<label class="BoxTel">
 						<span class="nameInput">Номер телефона</span> <span class="star">*</span><br>
 						<div class="inputBox">
-							<input type="text" id="telInput" name="phone" required>
+							<input type="text" id="phone" name="phone" required>
 							<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 						</div>
 					</label>
 					<label class="Box2Tel">
 						<span class="nameInput">Дополнительный номер</span><br>
 						<div class="inputBox">
-							<input type="text" id="tel2Input" name="phone2">
+							<input type="text" id="phone2" name="phone2">
 							<img src="src/InputCheckMark.svg" class="CheckMarkImg" alt="">
 						</div>
 					</label>
@@ -243,7 +244,7 @@
 						</label>
 					</div>
 				</div>
-				<input type="submit" value="Сохранить изменения">
+				<input class="submit" type="submit" name="save" value="Сохранить изменения">
 			</form>
 		</div>
 	</main>

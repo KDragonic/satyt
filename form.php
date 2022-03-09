@@ -3,12 +3,11 @@ class SendMail
 {
    private $data;
 
-   public function __construct($email, $data)
+   public function __construct($data)
    {
-      $this->email = $email;
       $this->data = $data;
 
-      if($this->validate($this->data)) $this->send($email, $data);
+      if($this->validate($this->data)) $this->send($data);
       else $response = [
          "message" => "Невернные данные",
          "fields" => []
@@ -47,10 +46,10 @@ class SendMail
       return true;
    }
 
-   public function send($email, $date)
+   public function send($date)
    {
       $response = [
-         "email" => $email,
+         "email" => $_POST['email'],
          "message" => "Запрос выполнен удачно!",
          "date" => $date,
       ];
@@ -60,4 +59,4 @@ class SendMail
       exit();
    }
 }
-new SendMail($_POST['email'], 'Ваши данные', $_POST);
+$send = new SendMail($_POST);
